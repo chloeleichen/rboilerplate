@@ -44,6 +44,7 @@ gulp.task('sass', function(){
 gulp.task('watch', function(){
   gulp.watch(path.SRC + '/sass/**', ['sass']);
   gulp.watch(path.SRC + '/js/**', ['jsx']);
+  gulp.watch([path.SRC + '/js/**', './spec/test.js'], ['test']);
 })
 
 //prod task 
@@ -71,6 +72,22 @@ gulp.task('default', ['watch']);
 //prod task
 //watch js and sass compile 
 gulp.task('prod', ['uglify', 'minify']);
+
+//compile task
+gulp.task('test', function() {
+  var b =  browserify({ debug:true });
+  b.add('./spec/test.js')
+   .transform(reactify)
+  return b.bundle()
+    .on('error', function (err) {
+            console.log(err.toString());
+            this.emit("end");
+        })
+    .pipe(source('spec.js'))
+    .pipe(gulp.dest('spec'));
+});
+
+
 
 
 
