@@ -1,0 +1,33 @@
+{
+  "name": "react-start",
+  "version": "1.0.0",
+  "description": "react starter kit",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chloeleichen/react-start"
+  },
+  "author": "chloeleichen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chloeleichen/react-start/issues"
+  },
+  "homepage": "https://github.com/chloeleichen/react-start",
+  "devDependencies": {
+    "browserify": "^11.1.0",
+    "gulp": "^3.9.0",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-rename": "^1.2.2",
+    "gulp-ruby-sass": "^2.0.3",
+    "gulp-uglify": "^1.4.1",
+    "gulp-util": "^3.0.6",
+    "gulp-watch": "^4.3.5",
+    "react": "^0.13.3",
+    "reactify": "^1.1.1",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.4.0"
+  }
+}
